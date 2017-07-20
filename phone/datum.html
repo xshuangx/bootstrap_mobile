@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../icon/iconfont.css">
+    <link rel="stylesheet" href="../swiper/dist/css/swiper.min.css">
+    <style>
+        *{margin: 0; padding: 0;}
+        body,html{width: 100%; height: 100%;}
+        body{position: relative;}
+        header{width:100%; height:10%; background: #b11f1f; text-align: center;
+            line-height: 174px; color: #fff; font-size: 380%; position: relative;}
+        header .glyphicon{width: 20%; height:50%;text-align: center; line-height: 74px;
+            position: absolute; left:4%; top:26%; font-size: 110%;}
+        header .iconfont{width: 20%; height:50%; border: 1px solid #7a0607;
+            text-align: center; line-height: 74px; position: absolute;
+            right:4%; top:26%; border-radius: 10px; font-size: 160%;}
+
+        nav{width: 100%; height: 5%; background: #9a9fa5; display: flex; justify-content:
+        space-around;}
+        nav .iconfont{text-align: center; line-height: 87px; font-size: 380%;}
+        nav .iconfont:hover{color: #fff;}
+
+        section{width: 100%; height: 59%; overflow: hidden; background: #f3eff0;}
+        section .box{width: 100%;height: 60%; margin-top: 3%;}
+        section .swiper-container{width: 10 0%; height: 80%;}
+        .swiper-slide img{width: 100%; height: 100%;}
+        .swiper-button-prev{position: absolute; top: 30%;}
+        .swiper-button-next{position: absolute; top: 30%;}
+        .swiper-pagination{width: 20%;height: 10%; position: absolute; left: 0; right: 0;
+                           top: 47%; margin: auto;}
+        .swiper-pagination-bullet{width: 10%;height: 12%; margin-left: 3%;}
+        section .text{font-size: 350%; margin:0 8%; line-height: 180%;}
+
+        #check{width: 100%; height: 13%; background: #fff; font-size: 350%; line-height:
+                445%; color: #bbb; position: relative;}
+        #check img{margin:0 5%;}
+        #check .glyphicon{text-align: center; line-height: 270%; position: absolute;
+                          right:4%; top:26%; font-size: 80%; color: #999;}
+
+        footer{width: 100%; height: 13%; background: #a3a3a3; position: relative;}
+        footer button{width: 80%; height: 80%; background: #b01c1c; position: absolute;
+                      left: 0; right: 0;top: 0;bottom: 0;margin: auto; border: 1px solid #930101;
+                      border-radius: 40px; color: #fff; font-size: 350%;}
+    </style>
+</head>
+<body>
+    <header>
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        商品资料
+        <i class="iconfont icon-shangchengxitongtubiaozitihuayuanwenjian68"></i>
+    </header>
+    <nav>
+        <i class="iconfont icon-weiyi"></i>
+        <i class="iconfont icon-baozhuanhuan"></i>
+        <i class="iconfont icon-chenshanzhuanhuan"></i>
+        <i class="iconfont icon-waitao"></i>
+        <i class="iconfont icon-xiepin"></i>
+        <i class="iconfont icon-nanshangyi"></i>
+        <i class="iconfont icon-nvshangyi"></i>
+        <i class="iconfont icon-taozhuang"></i>
+        <i class="iconfont icon-lianyiqun"></i>
+        <i class="iconfont icon-piyi"></i>
+    </nav>
+    <section>
+        <div class="box">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../img/product03.jpg"/></div>
+                    <div class="swiper-slide"><img src="../img/product03.jpg"/></div>
+                    <div class="swiper-slide"><img src="../img/product03.jpg"/></div>
+                    <div class="swiper-slide"><img src="../img/product03.jpg"/></div>
+                    <div class="swiper-slide"><img src="../img/product03.jpg"/></div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="text">
+            美特斯邦威 米底红色花朵印花短袖连衣裙</br>
+            ￥58.00</br>
+            购买人数 : 209
+        </div>
+    </section>
+    <div id="check">
+        <img src="../img/logo.jpg"/>
+        查看商品详情
+        <i class="glyphicon glyphicon-chevron-right"></i>
+    </div>
+    <footer>
+        <button>添加到购物车</button>
+    </footer>
+    <script src="../swiper/dist/js/swiper.min.js"></script>
+    <script language="javascript">
+        window.onload = function(){
+            var swiper = new Swiper(".swiper-container",{
+                loop:true,
+                slidesPerView: 3,
+                centeredSlides: true,
+                effect : 'coverflow',
+                // 如果需要分页器
+                pagination: '.swiper-pagination',
+                // 如果需要前进后退按钮
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev'
+            })
+        }
+    </script>
+</body>
+</html>
